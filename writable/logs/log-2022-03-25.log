@@ -1,0 +1,5 @@
+ERROR - 2022-03-25 18:47:52 --> Too big precision 100000 specified for 'fondos'. Maximum is 65
+ERROR - 2022-03-25 18:48:30 --> Incorrect table definition; there can be only one auto column and it must be defined as a key
+ERROR - 2022-03-25 18:53:17 --> Incorrect table definition; there can be only one auto column and it must be defined as a key
+ERROR - 2022-03-25 18:53:37 --> Incorrect table definition; there can be only one auto column and it must be defined as a key
+ERROR - 2022-03-25 18:54:45 --> Incorrect table definition; there can be only one auto column and it must be defined as a key

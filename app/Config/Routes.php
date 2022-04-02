@@ -32,6 +32,33 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
+$routes->group('api', ['namespace'=>'App\Controllers\API'], function ($routes){
+    $routes->get('clientes', 'Clientes::index');
+    $routes->post('clientes/create', 'Clientes::create');
+    $routes->get('clientes/edit/(:num)', 'Clientes::edit/$1');
+    $routes->put('clientes/update/(:num)', 'Clientes::update/$1');
+    $routes->delete('clientes/delete/(:num)', 'Clientes::delete/$1');
+
+    $routes->get('cuentas', 'Cuentas::index');
+    $routes->post('cuentas/create', 'Cuentas::create');
+    $routes->get('cuentas/edit/(:num)', 'Cuentas::edit/$1');
+    $routes->put('cuentas/update/(:num)', 'Cuentas::update/$1');
+    $routes->delete('cuentas/delete/(:num)', 'Cuentas::delete/$1');
+
+    $routes->get('transacciones', 'Transacciones::index');
+    $routes->post('transacciones/create', 'Transacciones::create');
+    $routes->get('transacciones/edit/(:num)', 'Transacciones::edit/$1');
+    $routes->put('transacciones/update/(:num)', 'Transacciones::update/$1');
+    $routes->delete('transacciones/delete/(:num)', 'Transacciones::delete/$1');
+    $routes->get('transacciones/cliente/(:num)', 'Transacciones::getTransaccionesCliente/$1');
+
+    $routes->get('tipot', 'TipoT::index');
+    $routes->post('tipot/create', 'TipoT::create');
+    $routes->get('tipot/edit/(:num)', 'TipoT::edit/$1');
+    $routes->put('tipot/update/(:num)', 'TipoT::update/$1');
+    $routes->delete('tipot/delete/(:num)', 'TipoT::delete/$1');
+
+});
 
 /*
  * --------------------------------------------------------------------
